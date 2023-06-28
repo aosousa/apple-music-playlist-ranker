@@ -17,8 +17,8 @@ for (var i = 0; i < songElements.length; i++) {
 
 	var songInfo = {
 		id: i,
-		name: songName[0].innerText,
-		imageSrc: e.getElementsByClassName('media-artwork-v2__image')[0].currentSrc.replace('80x80bb-50.jpg', '400x400bb-50.jpg'),
+		name: songName[0].innerText, 
+		imageSrc: e.getElementsByClassName('songs-list-row__artwork-wrapper')[0].children[0].children[0].children[0].srcset.split(',')[0].slice(0, -4).replace('40x40bb.webp', '400x400bb.webp'),
 		rating: 1400
 	};
 	songs.push(songInfo);
